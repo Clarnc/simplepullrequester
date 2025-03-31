@@ -1,0 +1,1 @@
+A Spring Boot application that retrieves GitHub user repository information excluding forks, with branch details.
