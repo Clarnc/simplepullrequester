@@ -22,7 +22,7 @@ public class GHService {
     private final RestTemplate restTemplate;
     private final GitHubUrlBuilder urlBuilder;
 
-    // Constructor injection
+
     public GHService(RestTemplate restTemplate, GitHubUrlBuilder urlBuilder) {
         this.restTemplate = restTemplate;
         this.urlBuilder = urlBuilder;
@@ -70,28 +70,29 @@ public class GHService {
 
 
     @Getter
-    private static class GitHubRepository {
-        // Getters
-        private String name;
-        private boolean fork;
-        private GitHubOwner owner;
+    public static class GitHubRepository {
+
+        public String name;
+        public boolean fork;
+        public GitHubOwner owner;
+
 
     }
 
     @Getter
-    private static class GitHubOwner {
-        private String login;
+    public static class GitHubOwner {
+         public String login;
     }
 
     @Getter
-    private static class GitHubBranch {
-        private String name;
-        private GitHubCommit commit;
+    public static class GitHubBranch {
+        public String name;
+        public GitHubCommit commit;
 
     }
 
     @Getter
-    private static class GitHubCommit {
-        private String sha;
+    public static class GitHubCommit {
+        public String sha;
     }
 }
